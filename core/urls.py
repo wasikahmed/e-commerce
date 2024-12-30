@@ -28,7 +28,7 @@ from django.conf import settings
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Raktec",
+        title="E-Commerce API Documentation",
         default_version='v1',),
     public=True,
     permission_classes=(permissions.AllowAny,),
@@ -42,6 +42,7 @@ urlpatterns = [
     # include urls from apps
     path('api/', include('sellers.urls')),
     path('api/', include('users.urls')),
+    path('api/', include('products.urls')),
     
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0),name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),

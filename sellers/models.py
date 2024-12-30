@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 class Seller(models.Model):
     name = models.CharField(max_length=100)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15)
     store_name = models.CharField(max_length=100)
-    stroe_url = models.URLField()
+    stroe_url = models.URLField(unique=True)
     registration_date = models.DateField()
     address = models.TextField()
 

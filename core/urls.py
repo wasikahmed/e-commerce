@@ -22,4 +22,5 @@ urlpatterns = [
     
     # include urls from apps
     path('api/', include('sellers.urls')),
+    path('api/', include('users.urls')),
 ]
